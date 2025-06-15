@@ -62,8 +62,8 @@ public class Status extends BaseModel implements DisplayItemsParent, Searchable{
 	public List<Mention> mentions;
 	@RequiredField
 	public List<Hashtag> tags;
-	@RequiredField
-	public List<Emoji> emojis;
+//	@RequiredField // sometimes null on glitch-soc? TODO: make this field required again
+	public List<Emoji> emojis = new ArrayList<>();
 	public long reblogsCount;
 	public long favouritesCount;
 	public long repliesCount;
@@ -302,8 +302,13 @@ public class Status extends BaseModel implements DisplayItemsParent, Searchable{
 			JsonObject obj=json.getAsJsonObject();
 
 			Status quote=null;
-			if (obj.has("quote") && obj.get("quote").isJsonObject())
+			if (obj.has("quote") && obj.get("quote").isJsonObject()) {
 				quote=gson.fromJson(obj.get("quote"), Status.class);
+
+				if (quote.account == null) {
+					quote=null;
+				}
+			}
 			obj.remove("quote");
 
 			Status reblog=null;

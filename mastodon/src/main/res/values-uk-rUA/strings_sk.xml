@@ -57,7 +57,7 @@
     <string name="sk_settings_show_federated_timeline">Показувати федеративну стрічку</string>
     <string name="sk_example_domain">example.social</string>
     <string name="sk_welcome_title">Вітаємо!</string>
-    <string name="sk_welcome_text">Акулка вітає вас! Щоб розпочати, введіть нижче доменне ім’я вашого сервера.</string>
+    <string name="sk_welcome_text">Акулка вітає вас! Щоб розпочати, введіть нижче доменне ім\'я вашого сервера.</string>
     <string name="sk_settings_profile">Налаштувати профіль</string>
     <string name="sk_settings_posting">Налаштувати постинг</string>
     <string name="sk_settings_filters">Налаштувати фільтри</string>
@@ -287,7 +287,7 @@
     <string name="sk_settings_content_types_explanation">Дозволяє налаштувати тип вмісту, наприклад, Markdown, під час написання допису. Зауважте, що не всі сервери підтримують цю функцію.</string>
     <string name="sk_open_in_app">Відкрити у застосунку</string>
     <string name="sk_external_share_title">Поділитися через обліковий запис</string>
-    <string name="sk_bubble_timeline_info_banner">Це найновіші дописи з мережі керованої адміністраторами вашого сервера.</string>
+    <string name="sk_bubble_timeline_info_banner">Це найновіші дописи з мережі, керованої адміністраторами вашого сервера.</string>
     <string name="sk_timeline_bubble">Бульбашка</string>
     <string name="sk_instance_info_unavailable">Сервер тимчасово недоступний</string>
     <string name="sk_external_share_or_open_title">Поділитися або відкрити за допомогою облікового запису</string>
@@ -366,7 +366,7 @@
         <item quantity="many">%1$,d користувачів зреагували %2$s</item>
         <item quantity="other">%1$,d користувачів зреагували %2$s</item>
     </plurals>
-    <string name="sk_button_react">Реагуйте за допомогою емоджі</string>
+    <string name="sk_button_react">Реагувати за допомогою емоджі</string>
     <string name="sk_again_for_system_keyboard">Торкніться ще раз, щоб відкрити системну клавіатуру</string>
     <string name="sk_settings_emoji_reactions">Увімкнути реакції з емоджі</string>
     <string name="sk_settings_emoji_reactions_explanation">Показує реакції емоджі на дописи та дає змогу додавати свої. Різні сервери Федісвіту підтримують цю функцію, але Mastodon не підтримує.</string>

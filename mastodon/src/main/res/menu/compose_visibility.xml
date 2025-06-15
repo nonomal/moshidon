@@ -13,7 +13,7 @@
 			android:icon="@drawable/ic_fluent_eye_24_regular"
 			android:title="@string/sk_local_only"/>
 		<item android:id="@+id/vis_public"
-			android:icon="@drawable/ic_fluent_earth_24_regular"
+			android:icon="@drawable/ic_fluent_planet_24_regular"
 			android:title="@string/visibility_public"/>
 		<item android:id="@+id/vis_unlisted"
 			android:icon="@drawable/ic_fluent_lock_open_24_regular"

@@ -787,7 +787,7 @@ public class ComposeFragment extends MastodonToolbarFragment implements OnBackPr
 			String ownID=AccountSessionManager.getInstance().getAccount(accountID).self.id;
 			if(!status.account.id.equals(ownID))
 				mentions.add('@'+status.account.acct);
-			if(status.rebloggedBy != null && GlobalUserPreferences.mentionRebloggerAutomatically)
+			if(GlobalUserPreferences.mentionRebloggerAutomatically && status.rebloggedBy != null && !status.rebloggedBy.id.equals(ownID))
 				mentions.add('@'+status.rebloggedBy.acct);
 			for(Mention mention:status.mentions){
 				if(mention.id.equals(ownID))
@@ -927,6 +927,9 @@ public class ComposeFragment extends MastodonToolbarFragment implements OnBackPr
 			}
 			return false;
 		});
+		if(instance.isIceshrimpJs())
+			languageButton.setVisibility(View.GONE); // hide language selector on Iceshrimp-JS because the feature is not supported
+
 		if (!GlobalUserPreferences.relocatePublishButton)
 			publishButton.post(()->publishButton.setMinimumWidth(publishButton.getWidth()));
 
@@ -1773,7 +1776,7 @@ public class ComposeFragment extends MastodonToolbarFragment implements OnBackPr
 			case LOCAL -> R.string.sk_local_only;
 		});
 		Drawable icon=getResources().getDrawable(switch(statusVisibility){
-			case PUBLIC -> R.drawable.ic_fluent_earth_16_regular;
+			case PUBLIC -> R.drawable.ic_fluent_planet_16_regular;
 			case UNLISTED -> R.drawable.ic_fluent_lock_open_16_regular;
 			case PRIVATE -> R.drawable.ic_fluent_lock_closed_16_filled;
 			case DIRECT -> R.drawable.ic_fluent_mention_16_regular;

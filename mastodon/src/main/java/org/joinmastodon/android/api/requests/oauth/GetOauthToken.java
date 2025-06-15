@@ -22,7 +22,6 @@ public class GetOauthToken extends MastodonAPIRequest<Token>{
 		public String clientId;
 		public String clientSecret;
 		public String redirectUri=AccountSessionManager.REDIRECT_URI;
-		public String scope=AccountSessionManager.SCOPE;
 		public String code;
 
 		public Request(String clientId, String clientSecret, String code, GrantType grantType){

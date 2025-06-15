@@ -123,7 +123,7 @@ public class ExtendedFooterStatusDisplayItem extends StatusDisplayItem{
 
 			//TODO: make a snackbar pop up on hold of this
 			visibility.setImageResource(switch (s.visibility) {
-				case PUBLIC -> R.drawable.ic_fluent_earth_20_regular;
+				case PUBLIC -> R.drawable.ic_fluent_planet_20_regular;
 				case UNLISTED -> R.drawable.ic_fluent_lock_open_20_regular;
 				case PRIVATE -> R.drawable.ic_fluent_lock_closed_20_filled;
 				case DIRECT -> R.drawable.ic_fluent_mention_20_regular;
